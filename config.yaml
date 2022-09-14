@@ -1,0 +1,121 @@
+baseURL: /
+languageCode: 'en-us'
+title: 'Pachyderm Knowledge Base'
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+theme: pach-emdash
+
+staticDir: "/themes/pach-emdash/static"
+
+outputs:
+    home:
+        - HTML
+        - JSON
+    section:
+        - HTML
+        - JSON
+    page:
+        - HTML
+        - JSON
+    taxonomies:
+        - HTML
+        - JSON
+    list:
+        - HTML
+        - JSON
+
+
+params:
+  logos:
+    nav: "/../images/pachyderm-logo.svg"
+    footer: "/../images/footer-logo.svg"
+
+  ## Content features
+  childPages:
+    display: true
+    grandchildren: true
+    grandchildrenTitle: "Subtopics"
+  editLink:
+    display: true
+    text: "Edit this page on GitHub"
+    githubURL: https://github.com/pachyderm/knowledge-base-articles/
+    branch: develop
+    path: content
+  giscus: true
+  heroBanner:
+    single: true
+    section: true
+    list: true
+    glossary: true
+    title: "Pachyderm Knowledge Base"
+    subtitle: "The Pachyderm Knowledge Base is a collection of articles, tutorials, and guides to help you get the most out of Pachyderm."
+  relatedArticles:
+    display: true
+    title: "Related Articles"
+  series:
+    display: true
+    title: "Series"
+
+  Community:
+    title: "Community"
+    subtitle: "Join the Pachyderm community to get help, share your work, and connect with other Pachyderm users."
+    links:
+      - title: "Slack"
+        url: "https://slack.pachyderm.io/"
+        icon: "fab fa-slack"
+      - title: "GitHub"
+        url: "https://github.com/pachyderm/pachyderm"
+        icon: "fab fa-github"
+
+  Documentation:
+      title: "Documentation"
+      subtitle: "The Pachyderm documentation is a collection of articles, tutorials, and guides to help you get the most out of Pachyderm."
+      links:
+          - title: "Pachyderm Docs"
+            url: "https://docs.pachyderm.com/"
+            icon: "fas fa-book"
+          - title: "Pachyderm Blog"
+            url: "https://blog.pachyderm.com/"
+            icon: "fas fa-blog"
+          - title: "Pachyderm YouTube"
+            url: "https://www.youtube.com/channel/UC0ZVY3KpJtq1YzqVxYXqX5w"
+            icon: "fab fa-youtube"
+          - title: "Pachyderm Twitter"
+            url: "https://twitter.com/pachyderm"
+            icon: "fab fa-twitter"
+          - title: "Pachyderm LinkedIn"
+            url: "https://www.linkedin.com/company/pachyderm/"
+            icon: "fab fa-linkedin"
+          - title: "Pachyderm GitHub"
+            url: "https://github.com/pachyderm/pachyderm"
+            icon: "fab fa-github"
+
+  versionDropdown:
+    versionDropdownTitle: "Version"
+    versionDropdownSubtitle: "Select a version to view the documentation for that version."
+  releaseInfo:
+    latest: "2.3.x"
+    latestURL: "https://docs.pachyderm.com/latest/"
+    patch: "2.3.2"
+
+  navLevel: 2
+  breadcrumbs: true
+  nextPrev: true
+
+  defaultCss: false
+
+sitemap:
+  changefreq: monthly
+  priority: 0.8
+
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
